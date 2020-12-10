@@ -182,7 +182,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     String success = jsonObject.getString("success");
                     JSONArray jsonArray = jsonObject.getJSONArray("login");
 
-                    //Log.d("Message", "" +jsonArray);
+                    Log.d("Message", "" +jsonArray);
                     if(success.equals("1")){
                         for (int i = 0; i<jsonArray.length(); i++){
 
