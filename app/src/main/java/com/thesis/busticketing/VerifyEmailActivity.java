@@ -1,5 +1,7 @@
 package com.thesis.busticketing;
 
+
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -33,7 +35,6 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 import es.dmoral.toasty.Toasty;
 
 public class VerifyEmailActivity extends AppCompatActivity {
-
     String URL_VERIFY_EMAIL ="http://bus-ticketing.herokuapp.com/verify_email.php";
     //String URL_VERIFY_EMAIL = "http://192.168.254.194/thesis/verify_email.php";
     EditText etVerifyCode;
@@ -121,6 +122,7 @@ public class VerifyEmailActivity extends AppCompatActivity {
                                     public void onClick(SweetAlertDialog sweetAlertDialog) {
 
                                         pDialog.dismissWithAnimation();
+
                                         Intent intent = new Intent(VerifyEmailActivity.this, Pay.class);
                                         intent.putExtra("email",email);
                                         intent.putExtra("firstname",firstname);
